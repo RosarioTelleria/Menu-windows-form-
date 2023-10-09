@@ -43,6 +43,9 @@ namespace Menu
             this.BtonReportes = new System.Windows.Forms.Button();
             this.ButtomGuias = new System.Windows.Forms.Button();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.SubmenuReportes = new System.Windows.Forms.Panel();
+            this.Reporteventas = new System.Windows.Forms.Button();
+            this.ReportedeGanancias = new System.Windows.Forms.Button();
             this.BarraMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btonmaximizar)).BeginInit();
@@ -52,6 +55,7 @@ namespace Menu
             ((System.ComponentModel.ISupportInitialize)(this.Btoncerrar)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SubmenuReportes.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraMenu
@@ -160,6 +164,7 @@ namespace Menu
             this.flowLayoutPanel1.Controls.Add(this.ButtomInventario);
             this.flowLayoutPanel1.Controls.Add(this.ButtomVentas);
             this.flowLayoutPanel1.Controls.Add(this.BtonReportes);
+            this.flowLayoutPanel1.Controls.Add(this.SubmenuReportes);
             this.flowLayoutPanel1.Controls.Add(this.ButtomGuias);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -252,7 +257,7 @@ namespace Menu
             this.ButtomGuias.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ButtomGuias.Image = global::Menu.Properties.Resources.empleados;
             this.ButtomGuias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtomGuias.Location = new System.Drawing.Point(4, 381);
+            this.ButtomGuias.Location = new System.Drawing.Point(4, 486);
             this.ButtomGuias.Margin = new System.Windows.Forms.Padding(4);
             this.ButtomGuias.Name = "ButtomGuias";
             this.ButtomGuias.Size = new System.Drawing.Size(289, 54);
@@ -262,11 +267,61 @@ namespace Menu
             // 
             // PanelContenedor
             // 
-            this.PanelContenedor.Location = new System.Drawing.Point(293, 52);
+            this.PanelContenedor.Location = new System.Drawing.Point(293, 53);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1440, 748);
+            this.PanelContenedor.Size = new System.Drawing.Size(1440, 747);
             this.PanelContenedor.TabIndex = 1;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // SubmenuReportes
+            // 
+            this.SubmenuReportes.Controls.Add(this.ReportedeGanancias);
+            this.SubmenuReportes.Controls.Add(this.Reporteventas);
+            this.SubmenuReportes.Location = new System.Drawing.Point(3, 380);
+            this.SubmenuReportes.Name = "SubmenuReportes";
+            this.SubmenuReportes.Size = new System.Drawing.Size(284, 99);
+            this.SubmenuReportes.TabIndex = 0;
+            this.SubmenuReportes.Visible = false;
+            // 
+            // Reporteventas
+            // 
+            this.Reporteventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.Reporteventas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Reporteventas.FlatAppearance.BorderSize = 0;
+            this.Reporteventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.Reporteventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reporteventas.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reporteventas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Reporteventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reporteventas.Location = new System.Drawing.Point(10, 14);
+            this.Reporteventas.Margin = new System.Windows.Forms.Padding(4);
+            this.Reporteventas.Name = "Reporteventas";
+            this.Reporteventas.Size = new System.Drawing.Size(233, 34);
+            this.Reporteventas.TabIndex = 6;
+            this.Reporteventas.Text = "->  Reporte de Ventas";
+            this.Reporteventas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Reporteventas.UseVisualStyleBackColor = false;
+            this.Reporteventas.Click += new System.EventHandler(this.Reporteventas_Click);
+            // 
+            // ReportedeGanancias
+            // 
+            this.ReportedeGanancias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ReportedeGanancias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReportedeGanancias.FlatAppearance.BorderSize = 0;
+            this.ReportedeGanancias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.ReportedeGanancias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReportedeGanancias.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportedeGanancias.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ReportedeGanancias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportedeGanancias.Location = new System.Drawing.Point(18, 41);
+            this.ReportedeGanancias.Margin = new System.Windows.Forms.Padding(4);
+            this.ReportedeGanancias.Name = "ReportedeGanancias";
+            this.ReportedeGanancias.Size = new System.Drawing.Size(259, 39);
+            this.ReportedeGanancias.TabIndex = 7;
+            this.ReportedeGanancias.Text = "->  Reporte de Ganancias";
+            this.ReportedeGanancias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ReportedeGanancias.UseVisualStyleBackColor = false;
+            this.ReportedeGanancias.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -279,6 +334,7 @@ namespace Menu
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.BarraMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BotonCerrar)).EndInit();
@@ -289,6 +345,7 @@ namespace Menu
             ((System.ComponentModel.ISupportInitialize)(this.Btoncerrar)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.SubmenuReportes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -309,6 +366,9 @@ namespace Menu
         private System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.PictureBox BotonCerrar;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel SubmenuReportes;
+        private System.Windows.Forms.Button Reporteventas;
+        private System.Windows.Forms.Button ReportedeGanancias;
     }
 }
 

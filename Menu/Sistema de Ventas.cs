@@ -91,7 +91,7 @@ namespace Menu
 
         private void BtonReportes_Click(object sender, EventArgs e)
         {
-
+           SubmenuReportes.Visible = true;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -121,6 +121,16 @@ namespace Menu
         {
             this.WindowState = FormWindowState.Minimized;
             pictureBox2.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SubmenuReportes.Visible = false;
+        }
+
+        private void Reporteventas_Click(object sender, EventArgs e)
+        {
+            SubmenuReportes.Visible=false;
         }
     }
 }
