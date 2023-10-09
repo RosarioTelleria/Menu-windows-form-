@@ -24,8 +24,8 @@ namespace Menu
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-            
 
+            InitializeComponent();
         }
 
         private void label1_Click_1(object sender, EventArgs e)

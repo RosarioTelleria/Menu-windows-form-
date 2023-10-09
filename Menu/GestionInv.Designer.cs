@@ -55,18 +55,18 @@ namespace Menu
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(311, 155);
+            this.dataGridView1.Location = new System.Drawing.Point(61, 99);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1001, 405);
+            this.dataGridView1.Size = new System.Drawing.Size(749, 405);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(1471, 155);
+            this.txtNombre.Location = new System.Drawing.Point(964, 113);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
@@ -75,7 +75,7 @@ namespace Menu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1319, 159);
+            this.label1.Location = new System.Drawing.Point(817, 114);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
@@ -85,7 +85,7 @@ namespace Menu
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(1404, 511);
+            this.btnGuardar.Location = new System.Drawing.Point(827, 438);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(164, 49);
@@ -97,7 +97,7 @@ namespace Menu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1319, 190);
+            this.label2.Location = new System.Drawing.Point(817, 145);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 16);
@@ -107,7 +107,7 @@ namespace Menu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1319, 225);
+            this.label3.Location = new System.Drawing.Point(817, 180);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 16);
@@ -116,7 +116,7 @@ namespace Menu
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(1471, 190);
+            this.txtDescripcion.Location = new System.Drawing.Point(964, 148);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(132, 22);
@@ -124,7 +124,7 @@ namespace Menu
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(1471, 222);
+            this.txtStock.Location = new System.Drawing.Point(964, 180);
             this.txtStock.Margin = new System.Windows.Forms.Padding(4);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(132, 22);
@@ -133,7 +133,7 @@ namespace Menu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1319, 257);
+            this.label4.Location = new System.Drawing.Point(817, 212);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 16);
@@ -142,7 +142,7 @@ namespace Menu
             // 
             // txtFechaCreacion
             // 
-            this.txtFechaCreacion.Location = new System.Drawing.Point(1471, 254);
+            this.txtFechaCreacion.Location = new System.Drawing.Point(964, 212);
             this.txtFechaCreacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaCreacion.Name = "txtFechaCreacion";
             this.txtFechaCreacion.Size = new System.Drawing.Size(132, 22);
@@ -151,7 +151,7 @@ namespace Menu
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1319, 295);
+            this.label5.Location = new System.Drawing.Point(817, 250);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 16);
@@ -160,7 +160,7 @@ namespace Menu
             // 
             // txtFechaVencimiento
             // 
-            this.txtFechaVencimiento.Location = new System.Drawing.Point(1471, 286);
+            this.txtFechaVencimiento.Location = new System.Drawing.Point(964, 244);
             this.txtFechaVencimiento.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaVencimiento.Name = "txtFechaVencimiento";
             this.txtFechaVencimiento.Size = new System.Drawing.Size(132, 22);
@@ -169,7 +169,7 @@ namespace Menu
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1319, 326);
+            this.label6.Location = new System.Drawing.Point(817, 281);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 16);
@@ -178,7 +178,7 @@ namespace Menu
             // 
             // txtPrecioCompra
             // 
-            this.txtPrecioCompra.Location = new System.Drawing.Point(1471, 318);
+            this.txtPrecioCompra.Location = new System.Drawing.Point(964, 276);
             this.txtPrecioCompra.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(132, 22);
@@ -186,7 +186,7 @@ namespace Menu
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(1471, 350);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(964, 308);
             this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(132, 22);
@@ -195,7 +195,7 @@ namespace Menu
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1319, 358);
+            this.label7.Location = new System.Drawing.Point(817, 313);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 16);
@@ -204,7 +204,7 @@ namespace Menu
             // 
             // Eliminar
             // 
-            this.Eliminar.Location = new System.Drawing.Point(1329, 400);
+            this.Eliminar.Location = new System.Drawing.Point(827, 355);
             this.Eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(88, 41);
@@ -215,7 +215,7 @@ namespace Menu
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1440, 400);
+            this.button3.Location = new System.Drawing.Point(938, 355);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 41);
@@ -226,7 +226,7 @@ namespace Menu
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(821, 614);
+            this.txtBusqueda.Location = new System.Drawing.Point(442, 578);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(183, 22);
@@ -236,7 +236,7 @@ namespace Menu
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(761, 620);
+            this.label8.Location = new System.Drawing.Point(382, 584);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 16);
@@ -247,7 +247,7 @@ namespace Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1620, 800);
+            this.ClientSize = new System.Drawing.Size(1201, 748);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.button3);
@@ -271,6 +271,8 @@ namespace Menu
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GestionInv";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fecha de creacion";
             this.Load += new System.EventHandler(this.GestionInv_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
