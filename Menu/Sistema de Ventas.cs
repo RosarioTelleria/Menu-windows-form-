@@ -48,6 +48,7 @@ namespace Menu
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SubmenuReportes.Visible = false;
             var form = Application.OpenForms.OfType<GestionInv>().FirstOrDefault();
             GestionInv hijo1 = form ?? new GestionInv();
             AbrirFormHija(hijo1);
@@ -56,7 +57,8 @@ namespace Menu
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+
+            SubmenuReportes.Visible = false;
             var form = Application.OpenForms.OfType<Ventas>().FirstOrDefault();
             Ventas hijo2 = form ?? new Ventas();
             AbrirFormHija(hijo2);
@@ -86,11 +88,7 @@ namespace Menu
             AbrirFormHija(new ReportedeGanancias());
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-          
-           
-        }
+       
 
         public void AbrirFormHija(Form fh)
         {
