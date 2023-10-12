@@ -1,5 +1,6 @@
 ﻿using Negocio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Menu.GestionInv;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Menu
 {
     public partial class GestionInv : Form
     {
+        string dato = "";
         CN_Productos objetoCN = new CN_Productos();
         private string idProducto = null;
        private bool Editar=false;
+
+
         public GestionInv()
         {
             InitializeComponent();
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -107,6 +113,62 @@ namespace Menu
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
+            txtStock.Text = "";
+            txtFechaCreacion.Text = "";
+            txtFechaVencimiento.Text = "";
+            txtPrecioCompra.Text = "";
+            txtPrecioVenta.Text = "";
+        }
+
+        //Eliminar
+        
+        //Editar
+       
+        private string cadenaConexion = "Data Source=\\SQLEXPRESS;Initial Catalog=Inventario;Integrated Security=True";
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+
+            
+            
+        }
+
+        private void BotonBuscar_Click(object sender, EventArgs e)
+        {
+            //string nombre = txtCriteriobusqueda.TextToString();
+            
+
+        }
+
+        private void buscar_en_datagrid( DataGridView d,int col)
+        {
+            
+
+        }
+
+        private void txtFechaCreacion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
             if (Editar == false)
             {
                 try
@@ -158,7 +220,7 @@ namespace Menu
                     // Limpiar cuadros de texto
                     LimpiarCampos();
                 }
-                
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("No se pudo registrar los datos por: " + ex.Message);
@@ -223,19 +285,28 @@ namespace Menu
             }
         }
 
-        private void LimpiarCampos()
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            txtNombre.Text = "";
-            txtDescripcion.Text = "";
-            txtStock.Text = "";
-            txtFechaCreacion.Text = "";
-            txtFechaVencimiento.Text = "";
-            txtPrecioCompra.Text = "";
-            txtPrecioVenta.Text = "";
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                Editar = true;
+                txtNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtDescripcion.Text = dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
+                txtStock.Text = dataGridView1.CurrentRow.Cells["Stock"].Value.ToString();
+                txtFechaCreacion.Text = dataGridView1.CurrentRow.Cells["FechaCreacion"].Value.ToString();
+                txtFechaVencimiento.Text = dataGridView1.CurrentRow.Cells["FechaVencimiento"].Value.ToString();
+                txtPrecioCompra.Text = dataGridView1.CurrentRow.Cells["PrecioCompra"].Value.ToString();
+                txtPrecioVenta.Text = dataGridView1.CurrentRow.Cells["PrecioVenta"].Value.ToString(); ;
+
+                idProducto = dataGridView1.CurrentRow.Cells["idProducto"].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("por favor selecciona una columna");
+            }
         }
 
-        //Eliminar
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -245,54 +316,23 @@ namespace Menu
                 MostrarProductos();
             }
             MessageBox.Show("Seleccione una fila por favor");
-            }
-        //Editar
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-                if (dataGridView1.SelectedRows.Count>0 )
-                {
-                Editar = true;
-                txtNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtDescripcion.Text = dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
-                txtStock.Text = dataGridView1.CurrentRow.Cells["Stock"].Value.ToString();
-                txtFechaCreacion.Text = dataGridView1.CurrentRow.Cells["FechaCreacion"].Value.ToString();
-                txtFechaVencimiento.Text = dataGridView1.CurrentRow.Cells["FechaVencimiento"].Value.ToString();
-                txtPrecioCompra.Text = dataGridView1.CurrentRow.Cells["PrecioCompra"].Value.ToString();
-                txtPrecioVenta.Text = dataGridView1.CurrentRow.Cells["PrecioVenta"].Value.ToString();;
-
-                idProducto = dataGridView1.CurrentRow.Cells["idProducto"].Value.ToString();
-            }else
-            {
-                MessageBox.Show("por favor selecciona una columna");
-            }
-
-
-
         }
-        private string cadenaConexion = "Data Source=LAPTOP-34PQSFQ3\\SQLEXPRESS;Initial Catalog=Inventario;Integrated Security=True";
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
-           
-            // Obtener el término de búsqueda ingresado por el usuario
-            string terminoBusqueda = txtBusqueda.Text;
-
-            using (SqlConnection sqlConnection = new SqlConnection(cadenaConexion))
-            {
-                sqlConnection.Open();
-
-                // Realizar la búsqueda en la base de datos
-                string consulta = "SELECT * FROM Productos WHERE Nombre LIKE @termino OR Descripcion LIKE @termino";
-                SqlCommand cmd = new SqlCommand(consulta, sqlConnection);
-                cmd.Parameters.AddWithValue("@termino", "%" + terminoBusqueda + "%");
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                // Asignar los resultados de la búsqueda al DataGridView
-                dataGridView1.DataSource = dt;
-            }
+            SqlConnection conexion = new SqlConnection("Data Source=localhost;Initial Catalog=Inventario;Integrated Security=True");
+            conexion.Open();
+            string consulta = $"select * from Productos  where  Nombre = '{txtCriteriobusqueda.Text}'";
+            SqlDataAdapter adapter = new SqlDataAdapter(consulta, conexion);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlDataReader lector;
+            lector = comando.ExecuteReader();
+            conexion.Close();
         }
     }
-}
+    }
+        
+    

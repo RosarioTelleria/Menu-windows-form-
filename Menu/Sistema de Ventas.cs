@@ -132,5 +132,10 @@ namespace Menu
         {
             SubmenuReportes.Visible=false;
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

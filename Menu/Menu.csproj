@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -194,6 +195,21 @@
       <Project>{c9daf144-5073-45ef-97c3-d111efb54b24}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GUARDAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285657_floppy_guardar_save_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\88361_adwords_editor_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2462966_delete_eliminate_garbage_litter_recycle_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xmag_search_find_export_locate_5984.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
